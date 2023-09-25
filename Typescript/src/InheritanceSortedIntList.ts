@@ -13,12 +13,7 @@ import { SortedIntList } from "./hidden/SortedIntListLibrary.js";
 
 class InheritanceSortedIntList extends SortedIntList {
     // Write your [implementation below with API documentation
-    private totalAdded: number;
-
-    constructor() {
-        super();
-        this.totalAdded = 0;
-    }
+    private totalAdded: number = 0;
 
     add(num: number): boolean {
         if (super.add(num)) {

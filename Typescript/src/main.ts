@@ -16,10 +16,10 @@ import { IntegerList } from './IntegerList.js'
  * Feel free to write more to test your implementation.
  * */
 
-const list1: DelegationSortedIntList = new DelegationSortedIntList()
-const list2: DelegationSortedIntList = new DelegationSortedIntList()
-// const list1: InheritanceSortedIntList = new InheritanceSortedIntList()
-// const list2: InheritanceSortedIntList = new InheritanceSortedIntList()
+// const list1: DelegationSortedIntList = new DelegationSortedIntList()
+// const list2: DelegationSortedIntList = new DelegationSortedIntList()
+const list1: InheritanceSortedIntList = new InheritanceSortedIntList()
+const list2: InheritanceSortedIntList = new InheritanceSortedIntList()
 
 // add 5 elements to our first list.
 list1.add(1)
