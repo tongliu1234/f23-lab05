@@ -8,8 +8,37 @@
  *
  */
 
-class DelegationSortedIntList {
-  // Write your implementation below with API documentatioin
+import { IntegerList } from "./IntegerList";
+import { SortedIntList } from "./hidden/SortedIntListLibrary.js";
+
+class DelegationSortedIntList implements IntegerList {
+    private sortedlist: IntegerList = new SortedIntList();
+    private totalAdded = 0;
+
+    add = (num: number) => {
+        if (this.sortedlist.add(num)) {
+            this.totalAdded += 1;
+            return true;
+        }
+        return false;
+    };
+
+    addAll = (list: IntegerList) => {
+        const oldSize = this.size();
+
+        if (this.sortedlist.addAll(list)) {
+            this.totalAdded += this.size() - oldSize;
+            return true;
+        }
+        return false;
+    };
+
+    getTotalAdded = () => this.totalAdded;
+
+    get = (index: number) => this.sortedlist.get(index);
+    remove = (num: number) => this.sortedlist.remove(num);
+    removeAll = (list: IntegerList) => this.sortedlist.removeAll(list);
+    size = () => this.sortedlist.size();
 }
 
-export { DelegationSortedIntList }
+export { DelegationSortedIntList };
